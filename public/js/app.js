@@ -84,9 +84,9 @@ let showEmoji = (res) => {
     for (let emoji of emojis) {
         for (let word of words) {
             if (word === emoji.sign) {
-                message += emoji.icon + " ";
+                message = emoji.icon + " ";
             }else {
-                message += word + " ";
+                message = word + " ";
             }
         }
     }
