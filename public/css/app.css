@@ -1,0 +1,30 @@
+body {
+    background: #eec;
+}
+#bolder , #italic , #underline {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+#italic {
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+#underline {
+    text-decoration: underline;
+}
+
+.b {
+    font-weight: bolder;
+}
+.i {
+    font-style: italic;
+}
+.u {
+    text-decoration: underline;
+}
+
+.activer {
+    background: #000000;
+    color: #fff;
+}
