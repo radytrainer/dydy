@@ -76,8 +76,11 @@ document.addEventListener('keyup', (e) => {
 })
 
 let showEmoji = (res) => {
-    let emoji = res.data;
-    console.log(emoji);
+    let emojis = res.data;
+    const text = document.querySelector('#comment').value;
+    for (let emoji of emojis) {
+        console.log(text)
+    }
 }
 
 let emoji =()=> {
