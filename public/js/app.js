@@ -36,6 +36,7 @@ let receiveMessage = () => {
 }
 
 let sendMessage = (e) => {
+    emoji();
     const userURL = rootEndPoint + "comments";
     const message = document.querySelector('#comment').value;
 
@@ -68,7 +69,6 @@ document.addEventListener('keyup', (e) => {
     let comment = document.querySelector('#comment').value;
     if (comment !== "") {
         btnComment.removeAttribute('disabled');
-        emoji();
     }else {
         btnComment.setAttribute('disabled', '')
     }
