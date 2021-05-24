@@ -16,7 +16,7 @@ let userList = (response) => {
 
     if (isCorrect) {
         setTimeout( () => {
-            window.location.href = "http://localhost:5000/logined";
+            window.location.href = "https://dy-konpa.herokuapp.com/logined";
         }, 1000)
         modalMessage("Success", 'alert-success', 'You login succesfully!')
     }else {
@@ -61,7 +61,7 @@ let login = () => {
 }
 
 let loginUser = {};
-const rootEndPoint = "http://localhost:5000/";
+const rootEndPoint = "https://dy-konpa.herokuapp.com/";
 const btnLogin = document.querySelector('#btn-login');
 btnLogin.addEventListener('click', login);
 

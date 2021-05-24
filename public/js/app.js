@@ -115,7 +115,7 @@ let getTextStyle = (e) => {
  
 }
 
-const rootEndPoint = "http://localhost:5000/";
+const rootEndPoint = "https://dy-konpa.herokuapp.com/";
 const cardBody = document.querySelector('.card-body');
 const btnComment = document.querySelector('#btn-comment');
 btnComment.addEventListener('click', sendMessage);
