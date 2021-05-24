@@ -36,7 +36,7 @@ let receiveMessage = () => {
 }
 
 let sendMessage = (e) => {
-    emoji();
+    
     const userURL = rootEndPoint + "comments";
     const message = document.querySelector('#comment').value;
 
@@ -72,14 +72,14 @@ document.addEventListener('keyup', (e) => {
     }else {
         btnComment.setAttribute('disabled', '')
     }
-
+    emoji();
 })
 
 let showEmoji = (res) => {
     let emojis = res.data;
     const text = document.querySelector('#comment').value;
     for (let emoji of emojis) {
-        console.log(text)
+        console.log(text.split(' '))
     }
 }
 
