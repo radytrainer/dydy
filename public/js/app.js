@@ -69,18 +69,29 @@ document.addEventListener('keyup', (e) => {
     let comment = document.querySelector('#comment').value;
     if (comment !== "") {
         btnComment.removeAttribute('disabled');
+        emoji();
     }else {
         btnComment.setAttribute('disabled', '')
     }
-    emoji();
+    
 })
 
 let showEmoji = (res) => {
     let emojis = res.data;
     const text = document.querySelector('#comment').value;
+    let message = "";
+    let words = text.split(' ');
     for (let emoji of emojis) {
-        console.log(text.split(' '))
+        for (let word of words) {
+            if (word === emoji.sign) {
+                message += emoji.icon + " ";
+            }else {
+                message += word + " ";
+            }
+        }
     }
+
+    console.log(message);
 }
 
 let emoji =()=> {
