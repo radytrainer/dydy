@@ -123,3 +123,18 @@ app.post('/users', (req, res) => {
         }])
     }
 });
+
+let icons = [
+    {id: 1, icon: 'icons/sad.png', sign: '):'},
+    {id: 2, icon: 'icons/smile.png', sign: '(:'},
+    {id: 3, icon: 'icons/khmer.png', sign: 'khmer'},
+    {id: 4, icon: 'icons/inlove.png', sign: 'love'},
+    {id: 5, icon: 'icons/frox.png', sign: 'frox'},
+    {id: 6, icon: 'icons/frog.png', sign: 'frog'},
+    {id: 7, icon: 'icons/boring.png', sign: 'bore'},
+    {id: 8, icon: 'icons/sleep.png', sign: 'sleep'},
+    {id: 9, icon: 'icons/bear.png', sign: 'bear'},
+    {id: 10, icon: 'icons/angry.png', sign: 'angry'},
+]
+
+app.get('/emoji', (req, res) => res.send(icons));
