@@ -67,12 +67,23 @@ let sendMessage = (e) => {
 document.addEventListener('keyup', (e) => {
     let comment = document.querySelector('#comment').value;
     if (comment !== "") {
-        btnComment.removeAttribute('disabled')
+        btnComment.removeAttribute('disabled');
+        emoji();
     }else {
         btnComment.setAttribute('disabled', '')
     }
 
 })
+
+let showEmoji = (res) => {
+    let emoji = res.data;
+    console.log(emoji);
+}
+
+let emoji =()=> {
+    const URL = "https://dy-konpa.herokuapp.com/emoji";
+    axios.get(URL).then(showEmoji);
+}
 
 let getTextStyle = (e) => {
     const bolder = document.querySelector('#bolder');
